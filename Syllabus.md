@@ -16,12 +16,18 @@ Section 1 : Mathematical Fundamentals
 - Polynomials
 - Evaluating Polynomials
 - Factorizing Polynomials
+- 
+
+
+
 
 Section 2 : Numbers
 ==================================
 *** Elements of Section 1 of Main Module ***
 
 ### Prime Numbers
+
+### Powers, Logarithms and Exponentials
 
 ### Scientific and Floating Point Notation
 
