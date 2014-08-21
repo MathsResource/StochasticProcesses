@@ -25,11 +25,11 @@ Section 2 : Numbers
 ==================================
 *** Elements of Section 1 of Main Module ***
 
-### Prime Numbers
+#### Prime Numbers
 
-### Powers, Logarithms and Exponentials
+#### Powers, Logarithms and Exponentials
 
-### Scientific and Floating Point Notation
+#### Scientific and Floating Point Notation
 
 
 Section 3 : Number Systems
@@ -37,9 +37,9 @@ Section 3 : Number Systems
 *** Most of Section 1 of Main Module ***
 
 
-### Binary Numbers
+#### Binary Numbers
 
-### Hexadecimal Numbers
+#### Hexadecimal Numbers
 
 
 Section 4 : Set Theory
@@ -48,6 +48,10 @@ Section 4 : Set Theory
 
 - Union Intersection and Complement
 - Set Theory
+
+Section 5 : Introduction to Functions
+==================================
+*** Section of Main Module ***
 
 
 Section 6 : Graph Theory
