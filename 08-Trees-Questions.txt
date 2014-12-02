@@ -1,0 +1,30 @@
+Questions for Section 8
+--------------
+Question 1
+ Definition of a Tree (T/F)
+Definition 3:1 page 31
+--------------
+Question 2
+Path graph
+The length of a path graph is the number of edges in it
+---------------
+Question 3
+Lemma 3:2
+ (apply a false answer)
+---------------
+Question 4 
+Rooted tree nodes
+---------------
+Question 5
+ Spanning trees
+ ---------------
+Question 6
+The vertices with no children is called the end vertices or external nodes
+ ---------------
+Question 7 
+binary trees
+ ---------------
+Question 8
+subtrees of a binary tree
+
+
