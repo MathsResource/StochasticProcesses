@@ -1,5 +1,5 @@
-PyData Workshop 
+Stochastic Processes
 =================
 
-1. Working with Time Series
-2. Plotting Time Series
+1. Gambler's Ruin
+2. Branching Processes
