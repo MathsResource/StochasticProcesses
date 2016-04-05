@@ -1,5 +1,5 @@
 
-A state diagram for a simple example is shown in the figure on the right, using a directed graph to picture the state transitions. The states represent whether a hypothetical stock market is exhibiting a bull market, bear market, or stagnant market trend during a given week. According to the figure, a bull week is followed by another bull week 90% of the time, a bear week 7.5% of the time, and a stagnant week the other 2.5% of the time. Labelling the state space {1 = bull, 2 = bear, 3 = stagnant} the transition matrix for this example is
+A state diagram for a simple example is shown in the figure on the right, using a directed graph to picture the state transitions. The states represent whether a hypothetical stock market is exhibiting a bull market, bear market, or stagnant market trend during a given week. According to the figure, a bull week is followed by another bull week 90\% of the time, a bear week 7.5\% of the time, and a stagnant week the other 2.5\% of the time. Labelling the state space {1 = bull, 2 = bear, 3 = stagnant} the transition matrix for this example is
 
 P = \begin{bmatrix}
 0.9 & 0.075 & 0.025 \\
@@ -37,7 +37,7 @@ x^{(n+3)} &= \begin{bmatrix} 0 & 1 & 0 \end{bmatrix}
 \end{align}
 
 %----------------------------------------------------%
-Using the transition matrix it is possible to calculate, for example, the long-term fraction of weeks during which the market is stagnant, or the average number of weeks it will take to go from a stagnant to a bull market. Using the transition probabilities, the steady-state probabilities indicate that 62.5% of weeks will be in a bull market, 31.25% of weeks will be in a bear market and 6.25% of weeks will be stagnant, since:
+Using the transition matrix it is possible to calculate, for example, the long-term fraction of weeks during which the market is stagnant, or the average number of weeks it will take to go from a stagnant to a bull market. Using the transition probabilities, the steady-state probabilities indicate that 62.5\% of weeks will be in a bull market, 31.25\% of weeks will be in a bear market and 6.25\% of weeks will be stagnant, since:
 
 \[\lim_{N\to \infty } \, P^N=
 \begin{bmatrix}
