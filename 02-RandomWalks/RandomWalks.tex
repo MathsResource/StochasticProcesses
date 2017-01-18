@@ -1,3 +1,90 @@
+MS4217 Stochastic Processes: Random Walks
+ 
+  
+Random walk is a one dimensional random variable.
+ 
+The number of different walks of n steps where each step is +1 or −1 is clearly 2n.
+ 
+For the simple random walk, each of these walks are equally likely.
+ 
+In order for Sn to be equal to a number k it is necessary and sufficient that the number of +1 in the walk exceeds those of -1 by k.
+ 
+Thus, the number of walks which satisfy Sn=k is n(n+k)/2, i.e. precisely the number of ways of choosing (n + k)/2 elements from an n element set (for this to be non-zero, it is necessary that n+k be an even number) .
+ 
+Therefore, the probability that Sn=k is equal to 2-nn(n+k)/2
+
+%=========================================================================================================%
+ 
+
+Simple random walks: 
+
+Outcomes ={ -1,0,1}
+
+Process jumps one step at a time.
+
+Set up the transition matrix for a simple random walks with a partially reflecting barrier at the origin given that the states of the 
+process are ={ 0,1,2,3,} (Assume pj.j+1= p)
+
+Three types of barriers:
+
+Absorbing barriers : once you reach this state, you cant get out of it.
+Fully reflecting barriers:  you cant enter nor exit this state
+Partially reflecting barriers: you can enter, but you will exit the way you entered.
+
+Gambler's ruin is a simple random walk with absorbing barriers are states 0 and a.
+Unrestricted random walks
+
+Unrestricted random walks are processes where there are no barriers.
+
+Three important questions:
+	1) What is the probability of a return to the origin?
+	2) Is a return certain?
+	3) What is the distributions after n steps?
+
+
+
+
+
+
+1) Return to Origin
+
+Uk	probability of going to state 0 when starting at state k 
+	[Similar to probability of ruin, from Gambler's ruin theory ]
+
+A return to the origin is only certain if p = q = 0.5.
+Uk= 1 if p = q = 0.5.
+
+3) Probability after n steps
+
+Xn : Position after n steps
+n   : Number of steps taken
+Rn : Number of rightward steps (consider a move to the right as positive)
+Ln : Number of leftward steps (consider a move to the left as negative)
+
+	necessarily
+	
+	 (a) n =Rn+Ln		 (b) Xn = Rn - Ln 
+
+re-arranging (a) and (b)   Rn= 0.5(n+Xn) 
+
+let vn,x be the probability of walk being at step x after n steps.
+
+vn,x =  n0.5(n+x)p0.5(n+x)q0.5(n-x)
+
+
+Example: 
+
+A random walk at k, where k is a positive integer, and takes place on the integers. It is assumed that Xn+1, the location of the walk after(n+1) steps satisfies;
+	Xn+1 = Xn+1 with probability p
+	Xn+1 = Xn-1 with probability q = 1-p
+
+Find the mean and variance ofXn
+Comment on the result when p = q = 0.5
+Derive the probability distribution Xn when k = 0.
+
+
+%========================================================================================%
+
 Simple random walks: 
 
 Outcomes ={ -1,0,1}
