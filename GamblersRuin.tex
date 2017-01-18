@@ -1,0 +1,153 @@
+Gambler's Fallacy
+
+
+M=100000
+
+Lands=ceiling(runif(M)*2)
+
+# 1 for Red
+# 2 for Black
+chain=1
+
+for(i in 2:M)
+{
+if(Lands[i]==Lands[i-1])
+  {
+  chain[i]=chain[i-1]+1 
+  }else{chain[i]=1}
+
+}
+
+
+
+\newpage
+
+
+%---------------------------------------------------------------%
+\section{Gambler's Ruin}
+
+Consider a gambler who starts with an initial fortune of $1 and then on each successive gamble
+either wins \$1 or loses \$1 independent of the past with probabilities p and q = 1-p respectively.
+Suppose the gambler has a starting kitty of A. 
+This gamblers places bets with the “Banker”, who has an initial fortune B. We will look at the game from the perspective of the gambler only.
+The Banker is, by convention, the richer of the two.
+\begin{itemize}
+\item Probability of successful gamble for gambler : p
+\item Probability of unsuccessful gamble for gambler : q 	(where q =  1 - p )
+\item Ratio of success probability to failure success:	$s = p / q$
+\item Conventionally the game is biased in favour of the Banker (i.e. $q>p$ and $s<1$)
+\end{itemize}
+Let $R_n$ denote the Gambler’s total fortune after the $n-$th gamble.
+If the Gambler wins the first game, his wealth becomes $R_n =A+1$.
+If he loses the first gamble, his wealth becomes $R_n = A-1$.
+The entire sum of money at stake is the “Jackpot” i.e.   $A+B$.
+The game ends when the Gambler wins the Jackpot ($R_n = A+B$) or loses everything ($R_n = 0$).
+\subsection{Simulation a Single Gamble}
+To simulate one single bet, compute a single random number between 0 and 1.
+\begin{framed}
+\begin{verbatim}
+runif(1)
+\end{verbatim}
+\end{framed}
+Lets assume that the game is biased in favour of the Banker
+p = 0.45 , q = 0.55.
+If the number is less than 0.45, the gamble wins. Otherwise the Banker wins.
+\begin{verbatim}
+> runif(1)
+[1] 0.1251274
+>#Gambler Loses
+>
+> runif(1)
+[1] 0.754075
+>#Gambler wins
+>
+> runif(1)
+[1] 0.2132148
+>#Gambler Loses
+>
+> runif(1)
+[1] 0.8306269
+\end{verbatim}
+%----------------------------------------------------------------------%
+Rn=c(20)
+A=20;B=100;p=0.47
+ 
+ 
+bet = runif(1)
+if (bet < 0.40)
+{
+A = A+1; B =B-1
+}else{A=A-1;B=B+1}
+#Save the values from each bet
+R=c(R,A)
+Lets put this in a loop (300 iterations should be enough)
+ 
+For ( I =1:300)
+{
+bet = runif(1)
+if (bet < p)
+{
+A = A+1; B =B-1
+}else{A=A-1;B=B+1}
+#Save the values from each bet
+R=c(R,A)
+}
+Consider a gambler who starts with an initial fortune of $1 and then on each successive gamble either wins $1 or loses $1 independent of the past with probabilities p and q = 1-p respectively.
+
+Let Rn denote the total fortune after the nth gamble.
+
+Game:  coin toss 
+Gambler wins if coin throw is “heads”
+	Banker wins if coint throw is “tails”. 
+Probability of success (heads) : p
+Probability of failure (tails) : q 	(where q =  1 - p )
+
+Ratio of success probability to failure success:	s = p / q
+
+Game is over if Gambler wins the jackpot
+Gamler loses everything
+
+The gambler’s objective is to reach a total fortune of $N, without first getting ruined (running out of money). 
+If the gambler succeeds,then the gambler is said to win the game. In any case, the gambler stops playing after winning or getting ruined, whichever happens first. 
+%--------------------------------------------------------------------------------%
+\begin{framed}
+\begin{verbatim}
+Kitty=300
+p=0.45
+#########################
+q=1-p
+while(Kitty >0)
+  {
+  ProbVal=runif(1)
+  if(ProbVal <= p)
+     {
+     Kitty=Kitty+1
+     }else{Kitty=Kitty-1}
+  Balance=c(Balance,Kitty)
+  }
+\begin{verbatim}
+\begin{framed}
+%--------------------------------------------------------------------------------%
+\begin{framed}
+\begin{verbatim}
+Kitty=100
+p=0.47
+q=1-p
+Balance=Kitty
+#########################
+while(Kitty >0)
+  {
+  ProbVal=runif(1)
+  if(ProbVal <= p)
+     {
+     Kitty=Kitty+1
+     }else{Kitty=Kitty-1}
+  Balance=c(Balance,Kitty)
+  }
+Balance
+length(Balance)
+plot(Balance,type="l",col="red")
+\begin{verbatim}
+\begin{framed}
+%--------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------%
