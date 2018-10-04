@@ -1,0 +1,8 @@
+Mathematical formulation[edit]
+The most common formulation of a branching process is that of the Galton–Watson process. Let Zn denote the state in period n (often interpreted as the size of generation n), and let Xn,i be a random variable denoting the number of direct successors of member i in period n, where Xn,i are independent and identically distributed random variables over all n ∈{ 0, 1, 2, ...} and i ∈ {1, ..., Zn}. Then the recurrence equation is
+
+Z_{n+1} = \sum_{i=1}^{Z_n} X_{n,i}
+with Z0 = 1. Alternatively, one can formulate a branching process as a random walk. Let Si denote the state in period i, and let Xi be a random variable that is iid over all i. Then the recurrence equation is
+
+S_{i+1} = S_i+X_{i+1}-1 = \sum_{j=1}^{i+1} X_j-i
+with S0 = 1. To gain some intuition for this formulation, one can imagine a walk where the goal is to visit every node, but every time a previously unvisited node is visited, additional nodes are revealed that must also be visited. Let Si represent the number of revealed but unvisited nodes in period i, and let Xi represent the number of new nodes that are revealed when node i is visited. Then in each period, the number of revealed but unvisited nodes equals the number of such nodes in the previous period, plus the new nodes that are revealed when visiting a node, minus the node that is visited. The process ends once all revealed nodes have been visited.

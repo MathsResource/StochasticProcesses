@@ -1,0 +1,69 @@
+R Class : Monte Carlo Integration
+
+What is Monte Carlo Integration
+Why MC integration is so important in many dimensions.
+
+%================================================================================================%
+
+What is Monte Carlo Integration
+
+Monte Carlo integration is numerical integration using random numbers. That is, Monte Carlo integration methods are algorithms for the approximate evaluation of definite integrals.
+
+The usual algorithms evaluate the integrand at a regular grid. 
+
+Monte Carlo methods, however, randomly choose the points at which the integrand is evaluated.
+
+If we consider a 1-D case, the problem can be stated in the form that we want to find the
+area A below an arbitrary curve in some interval [a, b].
+
+Image: http://beam.acclab.helsinki.fi/~knordlun/mc/mc5nc.pdf
+
+%================================================================================================%
+
+Why MC integration is so important in many dimensions.
+
+In 1D there really is no major difference, and indeed using methods like Simpson’s Rule the
+conventional numerical integration can easily be made quite accurate and much more
+efficient than MC integration.
+
+But with increasing numbers of dimensions M, doing the M sums becomes increasingly cumbersome, and eventually using the MC approach which only needs one sum will clearly be simpler!
+
+
+%================================================================================================%
+Hit and miss method
+
+There is another approach to MC integration, which is even simpler than the sampling approach.
+It is essentially the same as the hit-and-miss method used to generate random numbers in a
+nonuniform distribution. 
+
+The idea is that we find some region in space of known volume, which encloses the volume we want to integrate, then generate random points everywhere in this region, and count the points which actually do hit the volume we want to handle.
+
+
+%================================================================================================%
+Monte Carlo
+This is the method used for drawing a sample at random from the empirical distribution. I will start by giving a history and general remarks about Monte Carlo methods for those who have never studied them before.
+
+What is a Monte Carlo Method?
+There is not necessarily a random component in the original problem that one wants to solve, usually a problem for which there is no analytical solution. An unknown parameter (deterministic) is expressed as a parameter of some random distribution, that is then simulated. 
+The oldest well-known example is that of the estimation of  by Buffon, in his needle on the floorboards experiment, where supposing a needle of the same length as the width between cracks we have: 
+
+
+In physics and statistics many of the problems Monte Carlo is used on is under the form of the estimate of an integral unkown in closed form: 
+
+
+The crude, or mean-value Monte Carlo method thus proposes to generate  numbers uniformly from (0,1) and take their average: to estimate , 
+
+
+The hit-or-miss Monte Carlo method generates random points in a bounded rectangle and counts the number of 'hits' or points that are in the region whose area we want to evaluate. 
+
+
+Set up a unit rectangle between X=-1 and 1 and Y= -1 and 1
+
+A circle is x^2 + y^2 = 1
+
+Generate a pair of random numbers
+
+Determine whether the condition x^2 +Y^2  \leq 1 appplies
+
+
+%================================================================================================%a

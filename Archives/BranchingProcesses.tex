@@ -1,0 +1,228 @@
+Branching Processes
+The population size at time n will be denoted by Zn.
+ 
+Generation n+1 is made up of the offspring of individuals from generation n.
+ 
+ 
+The probability of ultimate extinction
+ 
+A central question in the theory of branching processes is the probability of ultimate extinction, where no individuals exist after some finite number of generations. It is not hard to show that, starting with one individual in generation zero, the expected size of generation n equals n where μ is the expected number of children of each individual.
+ 
+If μ is less than 1, then the expected number of individuals goes rapidly to zero, which implies ultimate extinction with probability 1 by Markov's inequality.
+ 
+Alternatively, if μ is greater than 1, then the probability of ultimate extinction is less than 1 (but not necessarily zero; consider a process where each individual either dies without issue or has 100 children with equal probability).
+ 
+If μ is equal to 1, then ultimate extinction occurs with probability 1 unless each individual always has exactly one child.
+ 
+
+=G(1)
+2=G(1) +-2
+
+
+
+
+Example 9.1
+ 
+In a branching process the probability that any individual has j descendants is given by
+ 
+po=0   and  pj=12j+1(j1)
+
+
+Show that the PGF of the first generation is given by G(s) =12-s
+ G(s) =1222+s=1211+s2
+
+Solution:
+
+G(s) =j=0pjsj=12j=0s2j
+
+	   =11+s2	     Geometric Series
+
+
+G(s) =1222+s=1211+s2
+ 
+
+
+HW4.1 Example
+ 
+In a branching process the probability that any individual has j descendants is given by
+ 
+po=0   and  pj=12j(j1)
+
+
+Show that the PGF of the first generation is given by G(s) =s2-s
+ G(s) =s211+s2
+
+Solution:
+
+G(s) =j=1pjsj=j=1s2j
+
+	   =11+s2	     Geometric Series
+
+	=s2j=0s2j	
+
+
+
+
+HW4.2 Example
+ 
+A branching process has the probability generating function
+ 
+G(s) = a + bs + (1 - a-b)s2
+ 
+for the descendants of any individual, where a and b satisfy the inequalities  0 < a < 1;    b > 0;    a + b< 1:
+ 
+ 
+
+Given that the process starts with one individual, discuss the nature of the descendant generations. What is the maximum possible population of the n-th generation? Show that extinction in the population is certain if 2a + b1:
+ 
+Solution
+ 
+G(s) = b + 2(1 - a -b)s
+
+G(s) = 2 - 2a - 2b
+ 
+mean =G(1) = b + 2(1 - a -b) = 2-2a -b
+ 
+
+
+variance  
+    2=G(1) +-2
+    2= [2-2a-2b] + [2-2a-b]-[2-2a-b]2
+        = [4-4a-3b]- [2(2-2a-b) - 2a(2-2a-b)-b(2-2a-b)]
+        = [4-4a-3b]- [(4-4a-2b) +(-4a-4a2+2ab)+(-2b+2ab+b2)]
+        = [4-4a-3b]- [4-8a-4b-4a2+4ab +b2)]
+        = [4a+b+4a2-4ab -b2]
+ 
+Probability of extinction
+ 
+
+g = G(g)    = a + bg + (1 - a-b)g2
+ 
+(1 - a-b)g2+ (b-1)g + a = 0
+ 
+ 
+roots:-(b-1)(b-1)2-4a(1-a-b)2-2a-2b
+
+
+
+
+Example HW4.3
+ 
+notes:
+ 
+1) The exponential function ex may be defined by the following power series
+ 
+
+
+
+  
+2) The probability-generating function of a Poisson random variable with rate parameter λ is
+  G(z) =e(s-1)
+ 
+Question:
+
+In a branching process the probability that any individual has j descendants is given by
+ 
+ pj=je-j!(j0)
+
+Determine the PGF of the first generation. 
+
+Solution:
+
+
+G(s) =j=0pjsj=j=0je-j!sj   
+        =e-j=0sjj! =(e-)(es) 
+        =es- =e(s-1)
+ 
+ 
+G(s) =e-d(es)ds=e-es=(e(s-1)) 
+ 
+
+G(1) =(e(1-1)) =e0= 
+ 
+
+
+
+
+Example (Smith and Jones pg 205)
+ 
+For a certain process with X0= 1, the probability generating function for X1 is given by
+G(s) =1(2-s)2
+Find the probability that the population ultimately becomes extinct. Find the mean and variance of the population of the n-th generation.
+ 
+Solution:
+The probability of extinction of the smallest root of g = G(g).
+ 
+g = G(g) =1(2-g)2
+ 
+g(2-g)2= 1              (g-1)(g2-3g +1) = 0   
+ 
+Roots of quadratic term 39 - 42=352
+Smallest of three roots is 3 -520.382
+ 
+Probability of ultimate extinction is 0.382 [ANS]
+ 
+Mean and Variance:
+ 
+G(s) = - 1-2(2-g)-3=2(2-g)-3=2(2-g)3          [Using Chain rule]
+ 
+G(s) = 2[- 1-3(2-g)-4] =6(2-g)4                 [coefficient and chain rule]
+
+=G(1) =2(2-1)3=2
+ 
+2=G(1) +-2= 6 +2 -4 =4
+ 
+The mean and variance of the Nth generation
+ 
+ 
+n=n=2n [ANS]
+ 
+n2=2n = 4n [ANS]
+ 
+ 
+ 
+Example HW4.4
+ 
+notes:
+ sech( x) =2(ex+e-x)=1cosh( x)            tanh( x) =ex-e-xex+e-x=sinh( x)cosh( x) 
+ 
+
+ 
+ 
+ 
+Question:
+ 
+A branching process starts with one individual. Any individual has a probability
+pj=2jsech(x)(2j)!        (j = 0, 1, 2,)
+ 
+of producing j descendants. Find the probability generating function of this
+distribution. Obtain the mean size of the nth generation. Show that ultimate
+extinction is certain if λ is less than the computed value 2.065.
+ 
+Solution:
+ 
+G(s) =j=0pjsj=sech()j=02j(2j)!(s)2j   
+ 
+
+G(s,) =sech()j=0(s)2j(2j)! =sech()cosh(s)  
+ 
+
+First derivative with respect to "s"
+ 
+G(s)(s,) =sechdcosh(s)ds =sech()2ssinh(s)   (using chain rule)
+ 
+            N.B. dds(s0.5) =0.5s-0.5=2s
+ 
+Mean size of population on first generation
+ 
+=G(s)(1,) =  
+ 
+Mean size of population on n-th generation
+ 
+n=n  
+ 
+Ultimate extinction
+ 
+lowest valued saolution to 
+ 
+This has solution g = 1
