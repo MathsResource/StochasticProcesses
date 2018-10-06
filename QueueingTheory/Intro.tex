@@ -1,18 +1,17 @@
 
 MS4217 Queuing Theory
 
-
-MS4217 Queuing Theory
-Notation
-Simple Queues (M/M/1)
-Steady State Equations
-Queueing Time
-Length of Queue
-Multiple Servers (M/M/n)
-Exam Question
+\begin{enumerate}
+\item Notation
+\item Simple Queues (M/M/1)
+\item Steady State Equations
+\item Queueing Time
+\item Length of Queue
+\item Multiple Servers (M/M/n)
+\item Exam Question
+\end{enumerate}
 
-
-
+\subsection{Characteristics of a Queue}
 In general, a queue is characterised by
 
 (a) the arrival process
@@ -21,13 +20,16 @@ In general, a queue is characterised by
 (d) the queue discipline.
 
 
-Notation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Notation}
 The simple queue is designated M|M|1, which means there are Markov arrivals, Markov service and 1 server. 
 
 M|M|2 implies Markov arrivals, Markov service and 2 servers. M|M|n implies Markov arrivals, Markov service and n servers.
 
 
-Simple Queues (M/M/1)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Simple Queues (M/M/1)}
 Assumptions for the M|M|1
 
 (a) Poisson arrivals, rate , i.e. M()
@@ -37,7 +39,8 @@ Assumptions for the M|M|1
 
 The probability that the queue contains x customers at time t is denoted px(t).
 
-Steady State Equations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Steady State Equations}
 p1+p0= 0 for x = 0
 
 pn=pn-1=np0
@@ -57,7 +60,9 @@ Geometric series: x=0x=11-
 p0= 1-
 
 px=x( 1-)
-Queueing Time  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Queueing Time }
 We make the assumption that the queue is in the steady state.
 
 	Queuing Time=Waiting Time + Service Time.
@@ -70,26 +75,31 @@ E(N) =n=1npn=n=1n(1-)n
 	      
 		 =n=1n=1-
 
- 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 
-Multiple Servers (M/M/n)
+\subsection{Multiple Servers (M/M/n)}
 Two scenarios
-1 ) There are free servers. No need to queue.
-2)  There are no free servers. There is a need to queue.
+\begin{enumerate}
+\item There are free servers. No need to queue.
+\item  There are no free servers. There is a need to queue.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-Exam Question 
+\subsection{Exam Question}
 In a M/M/1 queue, arrivals form a Poisson process with rate  and service times are i.i.d. random variables following the Negative Exponential distribution with parameter: f(t) =exp(-t) where in the queuing process ( < ).
 
 
-(a) Write down the steady-state difference equations for the queue size, X, and solve them for Pr(X=x) the probability distribution of the queue size (x = 0,1,2).
+\begin{enumerate}[(a)]
+\item Write down the steady-state difference equations for the queue size, X, and solve them for $\Pr(X=x)$ the probability distribution of the queue size (x = 0,1,2).
 
-(b) A new customer arrives. Derive the queuing time distribution given that there are x(0) customers ahead in the queue.
+\item A new customer arrives. Derive the queuing time distribution given that there are x(0) customers ahead in the queue.
 
-(c) Hence derive the unconditional queueing time distribution. Identify all of the various distributions derived.
+\item Hence derive the unconditional queueing time distribution. Identify all of the various distributions derived.
+\end{enumerate}
 
+\end{document}
 
 
 
