@@ -1,0 +1,78 @@
+%---------------------------------------------------------------------%
+%---------------------------------------------------------------------%
+
+\chapter{Markov Chains}
+\section{Markov Chains}
+
+\[
+T= \left[ \begin{array}{cccc} 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\0 & 0 & 0 & 0 \\0 & 0 & 0 & 0 \\
+\end{array} \right]
+\]
+
+Find the eigenvalues of the following matrix.
+\[
+T= \left[ \begin{array}{ccc} 0.25 & 0.5 & 0.25  \\ 0.50 & 0.25 & 0.25   \\0.25 & 0.25 & 0.50   \\
+\end{array} \right]
+\]
+
+\[
+Det(T-I_3\lambda)= \left| \begin{array}{ccc} 0.25-\lambda & 0.5 & 0.25  \\ 0.50 & 0.25-\lambda & 0.25   \\0.25 & 0.25 & 0.50-\lambda   \\
+\end{array} \right|
+\]
+
+
+\newpage
+
+
+
+\section{Markov Chains}
+
+\[
+T= \left[ \begin{array}{cccc} p_{11} & p_{12} & \dots & p_{1m} \\
+p_{21} & p_{22} & \dots & p_{2m} \\\vdots & \vdots & \ddots &
+\vdots
+\\ p_{m1} & p_{m2} & \dots & p_{mm} \\
+\end{array} \right]
+\]
+
+
+\subsection{Classification of States}
+\begin{enumerate}
+	\item Absorbing state \item Periodic state \item Persistent state
+	\item Transient state \item Ergodic state
+\end{enumerate}
+
+
+\subsection{Absorbing states}
+
+Absorbing states are characterized in Markov chains by a value of
+1 in the diagonal element of the matrix ($p_{ii} = 1$). Once
+entered, there is no escaping the absorbing states.
+
+
+\subsection{Classification of Chain}
+\begin{enumerate}
+	\item Irreducible sets \item Closed sets \item Ergodic chains
+\end{enumerate}
+
+\subsection{Irreducible Chain}
+An irreducible chain is a chain in which every state is accessible
+from any other state in a finite number of steps.
+
+\subsection{Closed Sets}
+A closed set is a subset of states that can not be escaped once
+entered. An absorbing state is a closed set composed of one state.
+\subsubsection{Closed Sets}
+\[
+T= \left[ \begin{array}{cccc} 0.2 & 0.2 & 0.3 & 0.3 \\ 0.1 & 0.2 & 0.3 & 0.4 \\0 & 0 & 0.5 & 0.5 \\0 & 0 & 0.5 & 0.5 \\
+\end{array} \right]
+\]
+
+Once either states 3 or 4 are entered, it is not possible to
+revert to states 1 or 2. States 3 and 4 will be the only states
+visited.
+\subsection{Ergodic Chains}
+For Ergodic Chains, the invariant distribution is the vector of
+the mean recurrence time reciprocals.
+
+\newpage

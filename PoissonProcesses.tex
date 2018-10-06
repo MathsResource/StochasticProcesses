@@ -1,2 +1,258 @@
 \section{Poisson Processes}
-The Poisson process is one of the most important random processes in probability theory. It is widely used to model random points in time and space, such as the times of radioactive emissions, the arrival times of customers at a service center, and the positions of flaws in a piece of material.
+The Poisson process is one of the most important random processes in probability theory. 
+It is widely used to model random points in time and space, such as the times of radioactive emissions, the arrival
+times of customers at a service center, and the positions of flaws in a piece of material.
+%- https://www.probabilitycourse.com/chapter11/11_1_3_merging_and_splitting_poisson_processes.php
+%==========================================%
+11.1.3 Merging and Splitting Poisson Processes
+
+Merging Independent Poisson Processes:
+Let 
+N1(t)
+and 
+
+N2(t)
+be two independent Poisson processes with rates 
+
+?1
+and 
+
+?2
+respectively. Let us define 
+$N(t)=N1(t)+N2(t)$. 
+That is, the random process 
+N(t)
+is obtained by combining the arrivals in N1(t)
+and 
+N2(t)
+(Figure 11.5). We claim that 
+N(t)
+is a Poisson process with rate 
+
+?=?1+?2. 
+To see this, first note that 
+
+N(0)=N1(0)+N2(0)=0+0=0.
+ 
+Figure 11.5 - Merging two Poisson processes 
+
+N1(t)
+and 
+
+N2(t)
+.
+
+Next, since 
+
+N1(t)
+and 
+
+N2(t)
+are independent and both have independent increments, we conclude that 
+N(t)
+N(t)
+also has independent increments. Finally, consider an interval of length 
+t
+t
+, i.e, 
+I=(t,t+t]
+I=(t,t+t]
+. Then the numbers of arrivals in 
+I
+I
+associated with 
+N
+1
+(t)
+N1(t)
+and 
+
+N2(t)
+are 
+
+Poisson(?1t)
+and 
+
+Poisson(?2t)
+and they are independent. Therefore, the number of arrivals in 
+I
+I
+associated with 
+N(t)
+N(t)
+is 
+Poisson((
+?
+1
++
+?
+2
+)t)
+Poisson((?1+?2)t)
+(sum of two independent Poisson random variables). 
+Merging Independent Poisson Processes
+
+Let 
+N
+1
+(t)
+N1(t)
+, 
+
+N2(t)
+, 
+?
+?
+, 
+
+Nm(t)
+be 
+m
+m
+independent Poisson processes with rates 
+
+?1
+, 
+?
+2
+?2
+, 
+?
+?
+, 
+?
+m
+?m
+. Let also 
+$N(t)=N1(t)+N2(t)+?+Nm(t),for all t?[0,8).$
+Then, 
+N(t)
+N(t)
+is a Poisson process with rate 
+?
+1
++
+?
+2
++?+
+?
+m
+?1+?2+?+?m
+. 
+Splitting (Thinning) of Poisson Processes:
+Here, we will talk about splitting a Poisson process into two independent Poisson processes. The idea will be better understood if we look at a concrete example. 
+
+
+Example 
+Suppose that the number of customers visiting a fast food restaurant in a given time interval 
+I
+I
+is 
+
+\[N~Poisson(µ)\]
+. Assume that each customer purchases a drink with probability 
+p
+p
+, independently from other customers, and independently from the value of 
+
+N
+. Let 
+
+X
+be the number of customers who purchase drinks in that time interval. Also, let 
+Y
+Y
+be the number of customers that do not purchase drinks; so 
+X+Y=N
+X+Y=N
+. 
+Find the marginal PMFs of 
+X
+X
+and 
+Y
+Y
+.
+Find the joint PMF of 
+X
+X
+and 
+Y
+Y
+.
+Are 
+X
+X
+and 
+Y
+Y
+independent?
+Solution 
+
+
+The above example was given for a specific interval 
+I
+I
+, in which a Poisson random variable 
+N
+N
+was split to two independent Poisson random variables 
+X
+X
+and 
+Y
+Y
+. However, the argument can be used to show the same result for splitting a Poisson process to two independent Poisson processes. More specifically, we have the following result. 
+Splitting a Poisson Processes
+
+Let 
+N(t)
+N(t)
+be a Poisson process with rate 
+?
+?
+. Here, we divide 
+N(t)
+N(t)
+to two processes 
+N
+1
+(t)
+N1(t)
+and 
+
+N2(t)
+in the following way (Figure 11.6). For each arrival, a coin with 
+
+P(H)=p
+is tossed. If the coin lands heads up, the arrival is sent to the first process (
+
+N1(t)
+), otherwise it is sent to the second process. The coin tosses are independent of each other and are independent of 
+N(t)
+N(t)
+. Then, 
+
+N1(t)
+is a Poisson process with rate 
+
+?p
+;
+
+N2(t)
+is a Poisson process with rate 
+
+?(1-p)
+;
+
+N1(t)
+and 
+N
+2
+(t)
+N2(t)
+are independent.
+ 
+Figure 11.6 - Splitting a Poisson process to two independent Poisson processes.
+
+\end{document}
